@@ -152,6 +152,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Mysql第一次课" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/14/Mysql第一次课/">Mysql第一次课</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/14/Mysql第一次课/" class="archive-article-date">
+  	<time datetime="2019-10-14T02:51:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#Mysql第一次课<br>二．Mysql安装<br>先安装mysql服务器<br>    数据库与表都是在服务器上创建的<br>在安装客户端<br>    负责连接上mysql服务器进而对服务其进行操作比较好用的客户端有两个Navicat sqlyog<br>四．Sql语句的学习<br>    创建表<br>        创建库<br>            Create database 库名</p>
+<pre><code>创建表
+    Create table 表名（</code></pre><p>字段1 数据类型 约束，<br>字段2 数据类型 约束，<br>字段3 数据类型<br>）</p>
+<p>数据类型<br>    int<br>    char字符串类型，固定长度<br>varchar字符串类型，可变长度<br>float<br>date 日期型<br>    插入语句<br>        Insert into 表名(字段一你，字段二，字段三)<br>                Values（数据一，数据二，数据三）;</p>
+<pre><code>查询语句
+    Select 字段1，字段2，字段3  from 表名；</code></pre><p>执行结果如下：</p>
+<p>删除语句<br>删除库<br>    drop database 库名；<br>删除表<br>    drop table 表名；<br>删除表中所有数据<br>    delete from表名；<br>删除表中部分数据<br>    delete from 表名 where …</p>
+<p>修改语句<br>    update 表名 set 字段1=值1 字段2=值2 where 条件；</p>
+<pre><code>修改表名
+    Alter table 旧表名 rename 新表明
+修改字段的数据类型
+    Alter table 表名 modify 列名 数据类型
+修改字段名字
+    Alter table 表名 嫦娥 旧表名 新表名
+删除字段
+    Alter table 表名 drop 列名</code></pre><p>五．约束<br>    1．主键约束（primary key），不能重复，非空（唯一）<br>        主键作用为，主键可以可以代表一条记录<br>    2．非空约束(not null)<br>    3．唯一约束（unique）<br>    4．外键约束（foreign key）<br>        外键：本张表使用的字段为另一张表的主键<br>        例如：学生表中的主键为学号，而成绩表也会使用上学号，那么成绩表的学号就称为成绩表的外键。<br>    5．默认约束（default） </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/14/Mysql第一次课/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="w-注册github" class="article article-type-w  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -172,7 +250,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>#注册github账号</p>
+
       
 
       
