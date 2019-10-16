@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>mysql第二次课 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="#mysql第二次课表的设计三大泛型    第一范式        表中的字段都是不可分割的最小数据单元。    第二范式        每张表只能描述一件事情，并且每张表必须有主键。    第三泛型        非主键字段必须依赖于主键字段，换句话说，非主键要与主键字段有直接关系。注意：设计表时，尽可能的符合规范，但是有时为了性能，可以牺牲一点规范。二、mysql中使用运算符    算术运算符">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql第二次课">
+<meta property="og:url" content="http://yoursite.com/2019/10/16/mysql第二次课/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#mysql第二次课表的设计三大泛型    第一范式        表中的字段都是不可分割的最小数据单元。    第二范式        每张表只能描述一件事情，并且每张表必须有主键。    第三泛型        非主键字段必须依赖于主键字段，换句话说，非主键要与主键字段有直接关系。注意：设计表时，尽可能的符合规范，但是有时为了性能，可以牺牲一点规范。二、mysql中使用运算符    算术运算符">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-16T11:43:58.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="mysql第二次课">
+<meta name="twitter:description" content="#mysql第二次课表的设计三大泛型    第一范式        表中的字段都是不可分割的最小数据单元。    第二范式        每张表只能描述一件事情，并且每张表必须有主键。    第三泛型        非主键字段必须依赖于主键字段，换句话说，非主键要与主键字段有直接关系。注意：设计表时，尽可能的符合规范，但是有时为了性能，可以牺牲一点规范。二、mysql中使用运算符    算术运算符">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,184 +154,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-mysql第二次课" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      mysql第二次课
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/mysql第二次课/" class="archive-article-date">
+
+        
+        <a href="/2019/10/16/mysql第二次课/" class="archive-article-date">
   	<time datetime="2019-10-16T11:43:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/mysql第二次课/">mysql第二次课</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#mysql第二次课<br>表的设计三大泛型<br>    第一范式<br>        表中的字段都是不可分割的最小数据单元。<br>    第二范式<br>        每张表只能描述一件事情，并且每张表必须有主键。<br>    第三泛型<br>        非主键字段必须依赖于主键字段，换句话说，非主键要与主键字段有直接关系。<br>注意：设计表时，尽可能的符合规范，但是有时为了性能，可以牺牲一点规范。<br>二、mysql中使用运算符<br>    算术运算符<br>        +  -  *  /<br>    逻辑运算符<br>        and  or<br>    比较运算符<br>        &lt;  &gt;  &gt;=  &lt;=  !=  &lt;&gt;</p>
+<p>三、聚合函数<br>    count() 求行数<br>    sum()  求和</p>
+<pre><code>    #算出goods表中商品总价
+    SELECT SUM(gprice) &apos;商品总价格&apos; FROM goods;
 
-        <div class="article-info info-on-right">
-          
-          
+avg()  求平均值
 
+    #算出goods表中商品的平均价格
+    SELECT AVG(gprice) &apos;商品平均价格&apos; FROM goods;
+
+max()  求最大值
+
+    #查询出价格最高的商品信息
+    SELECT * FROM goods WHERE gprice =(SELECT MAX(gprice)&apos;最高价格&apos; FROM goods);
+
+min()  求最小值</code></pre><p>四、几个关键字<br>    in       在什么什么范围内 例如 name in（‘张三’，‘李四’）</p>
+<pre><code>    #查询出商品名称是小熊雨伞，外套的都查询出来
+    SELECT * FROM goods WHERE gname IN(&apos;小熊雨伞&apos;,&apos;外套&apos;);
+
+not in 
+ name not in （‘张三’，‘李四’）姓名字要不是张三李四即可以查询出来
+
+is null   判断数据是否为空
+
+is not nul     是否不为空
+
+like  模糊查询
+limit 查询表中的前几行
+    #查询goods表中前两行
+    #limit 0,2; 从下标是0的行开始取两行。
+    SELECT * FROM goods LIMIT 0,2;
+
+between…and…   在什么什么范围内
+    #查询出价格处于10到50的商品价格的商品信息
+    SELECT * FROM goods WHERE gprice BETWEEN 10 AND 50;
+distinct 去重
+    #把商品名字去重
+    SELECT DISTINCT gname FROM goods;</code></pre><p> /*</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/16/mysql第二次课/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/14/Mysql第一次课/" class="archive-article-date">
-  	<time datetime="2019-10-14T02:51:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/14/Mysql第一次课/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mysql第一次课</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/14/Mysql第一次课/">Mysql第一次课</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/注册github/" class="archive-article-date">
-  	<time datetime="2019-10-11T02:01:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/注册github/">注册github</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/面向对象总结/" class="archive-article-date">
-  	<time datetime="2019-10-10T11:18:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/面向对象总结/">面向对象总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/面型对象总结/" class="archive-article-date">
-  	<time datetime="2019-10-10T10:56:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/面型对象总结/">面型对象总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-10T09:37:17.566Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -350,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -152,6 +152,106 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-mysql第二次课" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/16/mysql第二次课/">mysql第二次课</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/16/mysql第二次课/" class="archive-article-date">
+  	<time datetime="2019-10-16T11:43:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#mysql第二次课<br>表的设计三大泛型<br>    第一范式<br>        表中的字段都是不可分割的最小数据单元。<br>    第二范式<br>        每张表只能描述一件事情，并且每张表必须有主键。<br>    第三泛型<br>        非主键字段必须依赖于主键字段，换句话说，非主键要与主键字段有直接关系。<br>注意：设计表时，尽可能的符合规范，但是有时为了性能，可以牺牲一点规范。<br>二、mysql中使用运算符<br>    算术运算符<br>        +  -  *  /<br>    逻辑运算符<br>        and  or<br>    比较运算符<br>        &lt;  &gt;  &gt;=  &lt;=  !=  &lt;&gt;</p>
+<p>三、聚合函数<br>    count() 求行数<br>    sum()  求和</p>
+<pre><code>    #算出goods表中商品总价
+    SELECT SUM(gprice) &apos;商品总价格&apos; FROM goods;
+
+avg()  求平均值
+
+    #算出goods表中商品的平均价格
+    SELECT AVG(gprice) &apos;商品平均价格&apos; FROM goods;
+
+max()  求最大值
+
+    #查询出价格最高的商品信息
+    SELECT * FROM goods WHERE gprice =(SELECT MAX(gprice)&apos;最高价格&apos; FROM goods);
+
+min()  求最小值</code></pre><p>四、几个关键字<br>    in       在什么什么范围内 例如 name in（‘张三’，‘李四’）</p>
+<pre><code>    #查询出商品名称是小熊雨伞，外套的都查询出来
+    SELECT * FROM goods WHERE gname IN(&apos;小熊雨伞&apos;,&apos;外套&apos;);
+
+not in 
+ name not in （‘张三’，‘李四’）姓名字要不是张三李四即可以查询出来
+
+is null   判断数据是否为空
+
+is not nul     是否不为空
+
+like  模糊查询
+limit 查询表中的前几行
+    #查询goods表中前两行
+    #limit 0,2; 从下标是0的行开始取两行。
+    SELECT * FROM goods LIMIT 0,2;
+
+between…and…   在什么什么范围内
+    #查询出价格处于10到50的商品价格的商品信息
+    SELECT * FROM goods WHERE gprice BETWEEN 10 AND 50;
+distinct 去重
+    #把商品名字去重
+    SELECT DISTINCT gname FROM goods;</code></pre><p> /*</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/16/mysql第二次课/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Mysql第一次课" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
