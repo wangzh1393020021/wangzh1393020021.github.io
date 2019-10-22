@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/10 | Hexo</title>
+  <title>mysql第五次作业 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/10/index.html">
+  <meta name="description" content="#mysql第五次作业Mysql第五次课   数据库的优化    通过各种方式提高查询效率   其中优化途径之一为添加索引   什么事索引？    添加索引，就相当于为某个字段或某些字段添加目录，这样的话会大大提高查询效率   索引的分类    普通索引    唯一索引 组合索引 全文索引 空间索引   创建索引    1.创建表的同时，创建索引    2.通过alter table语句    3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql第五次作业">
+<meta property="og:url" content="http://yoursite.com/2019/10/22/mysql第五次作业/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#mysql第五次作业Mysql第五次课   数据库的优化    通过各种方式提高查询效率   其中优化途径之一为添加索引   什么事索引？    添加索引，就相当于为某个字段或某些字段添加目录，这样的话会大大提高查询效率   索引的分类    普通索引    唯一索引 组合索引 全文索引 空间索引   创建索引    1.创建表的同时，创建索引    2.通过alter table语句    3">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-22T11:41:18.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="mysql第五次作业">
+<meta name="twitter:description" content="#mysql第五次作业Mysql第五次课   数据库的优化    通过各种方式提高查询效率   其中优化途径之一为添加索引   什么事索引？    添加索引，就相当于为某个字段或某些字段添加目录，这样的话会大大提高查询效率   索引的分类    普通索引    唯一索引 组合索引 全文索引 空间索引   创建索引    1.创建表的同时，创建索引    2.通过alter table语句    3">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,238 +154,160 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-mysql第五次作业" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      mysql第五次作业
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/mysql第五次作业/" class="archive-article-date">
+
+        
+        <a href="/2019/10/22/mysql第五次作业/" class="archive-article-date">
   	<time datetime="2019-10-22T11:40:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/mysql第五次作业/">mysql第五次作业</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#mysql第五次作业<br>Mysql第五次课<br>   数据库的优化<br>    通过各种方式提高查询效率<br>   其中优化途径之一为添加索引<br>   什么事索引？<br>    添加索引，就相当于为某个字段或某些字段添加目录，这样的话会大大提高查询效率<br>   索引的分类<br>    普通索引<br>    唯一索引</p>
+<pre><code>组合索引
+全文索引
+空间索引</code></pre><p>   创建索引<br>    1.创建表的同时，创建索引<br>    2.通过alter table语句<br>    3.create index<br>二、事务<br>    一条语句组成一个整体，要么全部执行成功，要么全部执行失败，那么这几条语句就组成啦一个事务<br>    其实每条语句都是一个自动提交的事务<br>    1.关闭自动提交<br>    2.开启事务 bengin<br>    3.执行语句，如果失败全部回滚，rollback<br>    4.如果全部成功，提供事务 commit<br>事务的特性<br>    原子性<br>    事务是一个整体，要么全部成功，要么全部失败<br>    一致性<br>    事务执行前后，数据的状态应该一致的<br>    隔离性<br>    事务相互独立，互不影响<br>    永久性<br>    事务一旦对数据进行更改，造成的影响是永久的<br>隔离级别<br>未提交读（read uncommitted）<br>已提交读（read committed）<br>可重复读（repeatable read）<br>可串行化（seriarizable）</p>
+<p>*/<br>CREATE TABLE emp2(<br>eid INT PRIMARY KEY AUTO_INCREMENT,<br>enam VARCHAR(20) NOT NULL,<br>etel VARCHAR(20) UNIQUE,<br>INDEX(enam)  #为enam添加普通索引<br>)<br>SHOW INDEX FROM emp2;<br>#创建索引<br>CREATE INDEX index_name ON table_name(colname);<br>#创建唯一索引<br>CREATE UNIQUE INDEX index_name ON table_name(colname);</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/22/mysql第五次作业/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/mysql第三次课/" class="archive-article-date">
-  	<time datetime="2019-10-16T11:46:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/16/mysql第三次课/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mysql第三次课</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/mysql第三次课/">mysql第三次课</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/mysql第二次课/" class="archive-article-date">
-  	<time datetime="2019-10-16T11:43:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/mysql第二次课/">mysql第二次课</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/14/Mysql第一次课/" class="archive-article-date">
-  	<time datetime="2019-10-14T02:51:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/14/Mysql第一次课/">Mysql第一次课</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/11/注册github/" class="archive-article-date">
-  	<time datetime="2019-10-11T02:01:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/11/注册github/">注册github</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/面向对象总结/" class="archive-article-date">
-  	<time datetime="2019-10-10T11:18:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/面向对象总结/">面向对象总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/面型对象总结/" class="archive-article-date">
-  	<time datetime="2019-10-10T10:56:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/面型对象总结/">面型对象总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-10T09:37:17.566Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -404,8 +330,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
