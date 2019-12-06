@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>项目管理第一天后端 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="#用户管理UserInfopackage com.dzqc.bean;
+public class UserInfo {    //用户编号    private int user_id;    //,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">项目管理第一天后端</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">项目管理第一天后端</h1>
+        <div class="stuff">
+            <span>十二月 06, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <p>#用户管理UserInfo<br>package com.dzqc.bean;</p>
+<p>public class UserInfo {<br>    //用户编号<br>    private int user_id;<br>    //部门编号<br>    private int department_id;<br>    //角色编号<br>    private int role_id;<br>    //用户名<br>    private String user_name;<br>    //性别<br>    private String user_sex;<br>    //座机号<br>    private String user_mobile;<br>    //年龄<br>    private int user_age;<br>    //住址<br>    private String user_address;<br>    //工号<br>    private String user_num;<br>    //密码<br>    private String user_pw;<br>    //手机号<br>    private String user_tel;<br>    //身份证号<br>    private String user_idnum;<br>    //邮箱<br>    private String user_email;<br>    //用户添加时间<br>    private String user_addtime;<br>    //用户添加人<br>    private String user_addman;<br>    //资料修改时间<br>    private String user_changetime;<br>    //资料修改人<br>    private String user_changeman;<br>    //爱好、兴趣<br>    private String user_intest;<br>    //学历<br>    private String user_diploma;<br>    //银行卡号<br>    private String user_bankcard;<br>    //民族<br>    private String user_nation;<br>    //婚否<br>    private String is_married;<br>    //标志位<br>    private String is_used;<br>    //部门名称<br>    private String department_name;<br>    //角色名<br>    private String role_name;<br>    public int getUser_id() {<br>        return user_id;<br>    }<br>    public void setUser_id(int user_id) {<br>        this.user_id = user_id;<br>    }<br>    public int getDepartment_id() {<br>        return department_id;<br>    }<br>    public void setDepartment_id(int department_id) {<br>        this.department_id = department_id;<br>    }<br>    public int getRole_id() {<br>        return role_id;<br>    }<br>    public void setRole_id(int role_id) {<br>        this.role_id = role_id;<br>    }<br>    public String getUser_name() {<br>        return user_name;<br>    }<br>    public void setUser_name(String user_name) {<br>        this.user_name = user_name;<br>    }<br>    public String getUser_sex() {<br>        return user_sex;<br>    }<br>    public void setUser_sex(String user_sex) {<br>        this.user_sex = user_sex;<br>    }<br>    public String getUser_mobile() {<br>        return user_mobile;<br>    }<br>    public void setUser_mobile(String user_mobile) {<br>        this.user_mobile = user_mobile;<br>    }<br>    public int getUser_age() {<br>        return user_age;<br>    }<br>    public void setUser_age(int user_age) {<br>        this.user_age = user_age;<br>    }<br>    public String getUser_address() {<br>        return user_address;<br>    }<br>    public void setUser_address(String user_address) {<br>        this.user_address = user_address;<br>    }<br>    public String getUser_num() {<br>        return user_num;<br>    }<br>    public void setUser_num(String user_num) {<br>        this.user_num = user_num;<br>    }<br>    public String getUser_pw() {<br>        return user_pw;<br>    }<br>    public void setUser_pw(String user_pw) {<br>        this.user_pw = user_pw;<br>    }<br>    public String getUser_tel() {<br>        return user_tel;<br>    }<br>    public void setUser_tel(String user_tel) {<br>        this.user_tel = user_tel;<br>    }<br>    public String getUser_idnum() {<br>        return user_idnum;<br>    }<br>    public void setUser_idnum(String user_idnum) {<br>        this.user_idnum = user_idnum;<br>    }<br>    public String getUser_email() {<br>        return user_email;<br>    }<br>    public void setUser_email(String user_email) {<br>        this.user_email = user_email;<br>    }<br>    public String getUser_addtime() {<br>        return user_addtime;<br>    }<br>    public void setUser_addtime(String user_addtime) {<br>        this.user_addtime = user_addtime;<br>    }<br>    public String getUser_addman() {<br>        return user_addman;<br>    }<br>    public void setUser_addman(String user_addman) {<br>        this.user_addman = user_addman;<br>    }<br>    public String getUser_changetime() {<br>        return user_changetime;<br>    }<br>    public void setUser_changetime(String user_changetime) {<br>        this.user_changetime = user_changetime;<br>    }<br>    public String getUser_changeman() {<br>        return user_changeman;<br>    }<br>    public void setUser_changeman(String user_changeman) {<br>        this.user_changeman = user_changeman;<br>    }<br>    public String getUser_intest() {<br>        return user_intest;<br>    }<br>    public void setUser_intest(String user_intest) {<br>        this.user_intest = user_intest;<br>    }<br>    public String getUser_diploma() {<br>        return user_diploma;<br>    }<br>    public void setUser_diploma(String user_diploma) {<br>        this.user_diploma = user_diploma;<br>    }<br>    public String getUser_bankcard() {<br>        return user_bankcard;<br>    }<br>    public void setUser_bankcard(String user_bankcard) {<br>        this.user_bankcard = user_bankcard;<br>    }<br>    public String getUser_nation() {<br>        return user_nation;<br>    }<br>    public void setUser_nation(String user_nation) {<br>        this.user_nation = user_nation;<br>    }<br>    public String getIs_married() {<br>        return is_married;<br>    }<br>    public void setIs_married(String is_married) {<br>        this.is_married = is_married;<br>    }<br>    public String getIs_used() {<br>        return is_used;<br>    }<br>    public void setIs_used(String is_used) {<br>        this.is_used = is_used;<br>    }</p>
+<pre><code>public String getDepartment_name() {
+    return department_name;
+}
+public void setDepartment_name(String department_name) {
+    this.department_name = department_name;
+}
+public String getRole_name() {
+    return role_name;
+}
+public void setRole_name(String role_name) {
+    this.role_name = role_name;
+}
+@Override
+public String toString() {
+    return &quot;UserInfo [user_id=&quot; + user_id + &quot;, department_id=&quot; + department_id + &quot;, role_id=&quot; + role_id
+            + &quot;, department_name=&quot; + department_name + &quot;, role_name=&quot; + role_name + &quot;, user_name=&quot; + user_name
+            + &quot;, user_sex=&quot; + user_sex + &quot;, user_mobile=&quot; + user_mobile + &quot;, user_age=&quot; + user_age
+            + &quot;, user_address=&quot; + user_address + &quot;, user_num=&quot; + user_num + &quot;, user_pw=&quot; + user_pw + &quot;, user_tel=&quot;
+            + user_tel + &quot;, user_idnum=&quot; + user_idnum + &quot;, user_email=&quot; + user_email + &quot;, user_addtime=&quot;
+            + user_addtime + &quot;, user_addman=&quot; + user_addman + &quot;, user_changetime=&quot; + user_changetime
+            + &quot;, user_changeman=&quot; + user_changeman + &quot;, user_intest=&quot; + user_intest + &quot;, user_diploma=&quot;
+            + user_diploma + &quot;, user_bankcard=&quot; + user_bankcard + &quot;, user_nation=&quot; + user_nation + &quot;, is_married=&quot;
+            + is_married + &quot;, is_used=&quot; + is_used + &quot;, getUser_id()=&quot; + getUser_id() + &quot;, getDepartment_id()=&quot;
+            + getDepartment_id() + &quot;, getRole_id()=&quot; + getRole_id() + &quot;, getUser_name()=&quot; + getUser_name()
+            + &quot;, getUser_sex()=&quot; + getUser_sex() + &quot;, getUser_mobile()=&quot; + getUser_mobile() + &quot;, getUser_age()=&quot;
+            + getUser_age() + &quot;, getUser_address()=&quot; + getUser_address() + &quot;, getUser_num()=&quot; + getUser_num()
+            + &quot;, getUser_pw()=&quot; + getUser_pw() + &quot;, getUser_tel()=&quot; + getUser_tel() + &quot;, getUser_idnum()=&quot;
+            + getUser_idnum() + &quot;, getUser_email()=&quot; + getUser_email() + &quot;, getUser_addtime()=&quot; + getUser_addtime()
+            + &quot;, getUser_addman()=&quot; + getUser_addman() + &quot;, getUser_changetime()=&quot; + getUser_changetime()
+            + &quot;, getUser_changeman()=&quot; + getUser_changeman() + &quot;, getUser_intest()=&quot; + getUser_intest()
+            + &quot;, getUser_diploma()=&quot; + getUser_diploma() + &quot;, getUser_bankcard()=&quot; + getUser_bankcard()
+            + &quot;, getUser_nation()=&quot; + getUser_nation() + &quot;, getIs_married()=&quot; + getIs_married() + &quot;, getIs_used()=&quot;
+            + getIs_used() + &quot;, getDepartment_name()=&quot; + getDepartment_name() + &quot;, getRole_name()=&quot; + getRole_name()
+            + &quot;, getClass()=&quot; + getClass() + &quot;, hashCode()=&quot; + hashCode() + &quot;, toString()=&quot; + super.toString()
+            + &quot;]&quot;;
+}</code></pre><p>}</p>
+<p>二、角色权限实体类UserRole<br>package com.dzqc.bean;<br>/**</p>
+<ul>
+<li>角色权限实体类</li>
+<li>@author 王紫豪</li>
+<li></li>
+<li>/<br>public class UserRole {<br>  //角色名<br>  private int role_id;<br>  //角色权利登记<br>  private String role_name;<br>  //是否有效<br>  private int role_power;<br>  private String is_used;<br>  public int getRole_id() {<pre><code>return role_id;</code></pre>  }<br>  public void setRole_id(int role_id) {<pre><code>this.role_id = role_id;</code></pre>  }<br>  public String getRole_name() {<pre><code>return role_name;</code></pre>  }<br>  public void setRole_name(String role_name) {<pre><code>this.role_name = role_name;</code></pre>  }<br>  public int getRole_power() {<pre><code>return role_power;</code></pre>  }<br>  public void setRole_power(int role_power) {<pre><code>this.role_power = role_power;</code></pre>  }<br>  public String getIs_used() {<pre><code>return is_used;</code></pre>  }<br>  public void setIs_used(String is_used) {<pre><code>this.is_used = is_used;</code></pre>  }<br>  @Override<br>  public String toString() {<pre><code>return &quot;UserRole [role_id=&quot; + role_id + &quot;, role_name=&quot; + role_name + &quot;, role_power=&quot; + role_power + &quot;, is_used=&quot;
+        + is_used + &quot;]&quot;;</code></pre>  }</li>
+</ul>
+<p>}</p>
+<p>三、部门管理类DepartmentInfo<br>package com.dzqc.bean;</p>
+<p>public class DepartmentInfo {<br>    private int department_id;<br>    //部门名称<br>    private String department_name;<br>    //部门描述<br>    private String department_desc;<br>    //是否可用<br>    private String is_used;<br>    public int getDepartment_id() {<br>        return department_id;<br>    }<br>    public void setDepartment_id(int department_id) {<br>        this.department_id = department_id;<br>    }<br>    public String getDepartment_name() {<br>        return department_name;<br>    }<br>    public void setDepartment_name(String department_name) {<br>        this.department_name = department_name;<br>    }<br>    public String getDepartment_desc() {<br>        return department_desc;<br>    }<br>    public void setDepartment_desc(String department_desc) {<br>        this.department_desc = department_desc;<br>    }<br>    public String getIs_used() {<br>        return is_used;<br>    }<br>    public void setIs_used(String is_used) {<br>        this.is_used = is_used;<br>    }<br>    @Override<br>    public String toString() {<br>        return “DepartmentInfo [department_id=” + department_id + “, department_name=” + department_name<br>                + “, department_desc=” + department_desc + “, is_used=” + is_used + “]”;<br>    }</p>
+<p>}</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
