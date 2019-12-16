@@ -92,7 +92,7 @@ int[] a3={1,2,3,4,5,6};
 <p>public static void main(String[] args) {<br>            //ThreadStus ts =new ThreadStus();<br>            //开启线程<br>            //ts.start();<br>            RunnableSon rs=new RunnableSon();<br>            Thread td=new Thread(rs);<br>            td.start();<br>            for(int i=0;i&lt;=20;i++){<br>                System.out.println(“main”+i);<br>            }<br>        }<br>public void run() {<br>            //开启线程会自动执行run方法<br>            //run方法里面写的就是线程要执行的任务<br>            for(int i=0;i&lt;=20;i++){<br>                System.out.println(“aaa”+i);<br>            }</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
             </audio>
             
